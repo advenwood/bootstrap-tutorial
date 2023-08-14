@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap tutorial - Buttons</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-lg my-5">
+        <h2>Basic grid</h2>
+        <div class="row">
+            <div class="col">
+                <div class="p-5 bg-primary text-light">First column</div>
+            </div>
+            <div class="col">
+                <div class="p-5 bg-primary text-light">Second column</div>
+            </div>
+            <div class="col">
+                <div class="p-5 bg-primary text-light">Third column</div>
+            </div>
+            <div class="col">
+                <div class="p-5 bg-primary text-light">Fourth column</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-lg my-5">
+        <h2>Column width</h2>
+        <p>"col-" + add value drom 1 to 12 because there are 12 columns in total</p>
+        <div class="row">
+            <div class="col-6">
+                <div class="p-5 bg-success text-light">First column</div>
+            </div>
+            <div class="col-3">
+                <div class="p-5 bg-success text-light">Second column</div>
+            </div>
+            <div class="col-3">
+                <div class="p-5 bg-success text-light">Third column</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-lg my-5">
+        <h2>Responsive column widths</h2>
+        <div class="row">
+            <div class="col-sm-4 col-lg-6">
+                <div class="p-5 bg-danger text-light">First column</div>
+                <!-- 12 is the default, then with small screen it takes up 4 & with large screen it takes up 6 -->
+            </div>
+            <div class="col-sm-4 col-lg-3">
+                <div class="p-5 bg-danger text-light">Second column</div>
+            </div>
+            <div class="col-sm-4 col-lg-3">
+                <div class="p-5 bg-danger text-light">Third column</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-lg my-5">
+        <h2>Justifying columns</h2>
+        <div class="row justify-content-between">
+            <div class="col-md-3">
+                <div class="p-5 bg-warning text-light">First column</div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-5 bg-warning text-light">Second column</div>
+            </div>
+            <div class="col-md-3">
+                <div class="p-5 bg-warning text-light">Third column</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
