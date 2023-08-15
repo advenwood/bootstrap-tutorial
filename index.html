@@ -65,10 +65,19 @@
                         <div class="display-5 text-muted">Your coding skills</div>
                     </h1>
                     <p class="lead my-4 text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <a href="#pricing" class="btn btn-primary btn-lg">Buy Now</a>
+                    <a href="#pricing" class="btn btn-primary btn-lg">
+                        Buy Now
+                    </a>
+                    <!-- OPEN SIDEBAR / OFFCANVAS TRIGGER -->
+                    <a href="#sidebar" class="d-block mt-3" data-bs-toggle="offcanvas" role="button" aria-controls="Sidebar">
+                        Explore my other books
+                    </a>
                 </div>
                 <div class="col-md-5 text-center d-none d-md-block">
-                    <img src="assets/ebook-cover.png" alt="Ebook cover" class="img-fluid">
+                    <!-- TOOLTIP -->
+                    <span class="tt" data-bs-placement="bottom" title="Net Ninja Book Cover">
+                        <img src="assets/ebook-cover.png" alt="Ebook cover" class="img-fluid">
+                    </span>
                 </div> 
             </div>
         </div>
@@ -287,6 +296,12 @@
                                 <i class="bi bi-envelope-fill"></i>
                             </span>
                             <input type="email" class="form-control" id="email" placeholder="e.g. mario@example.com">
+                            <!-- TOOLTIP -->
+                            <span class="tt" data-bs-placement="bottom" title="Enter an email address we can reply to">
+                                <span class="input-group-text">
+                                    <i class="bi bi-question-circle text-muted"></i>
+                                </span>
+                            </span>
                         </div>
                         
                         <label for="name" class="form-label">
@@ -297,6 +312,12 @@
                                 <i class="bi bi-person-fill"></i>
                             </span>
                             <input type="text" class="form-control" id="name" placeholder="e.g. Mario">
+                            <!-- TOOLTIP -->
+                            <span class="tt" data-bs-placement="bottom" title="Pretty self explanatory">
+                                <span class="input-group-text">
+                                    <i class="bi bi-question-circle text-muted"></i>
+                                </span>
+                            </span>
                         </div>
 
                         <label for="subject" class="form-label">
@@ -327,10 +348,81 @@
                     </form>
                 </div>
             </div>
-
         </div>
     </section>
 
+    <!-- GET UPDATES / MODAL TRIGGER -->
+    <section class="bg-light p-3">
+        <div class="container">
+            <div class="text-center">
+                <h2>Stay in the loop</h2>
+                <p class="lead text-muted">Get the latest updates as they happen</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <p class="text-muted my-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem iste molestias a fuga omnis nobis quibusdam dolore expedita quo sit possimus temporibus suscipit laudantium, modi labore architecto laboriosam optio voluptatum cum consequatur esse! Iure maiores cupiditate recusandae quia sunt temporibus, ducimus nostrum amet earum tenetur saepe perspiciatis explicabo eius. Hic!</p>
+                    <button class="btn btn-lg btn-primary" data-bs-toggle="modal" data-bs-target="#reg-modal">
+                        Register for updates
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE MODAL ITSELF -->
+    <div id="reg-modal" class="modal fade" tabindex="-1" aria-labelledby="Modal-Title" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-title">Get the latest updates</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius, pariatur aspernatur necessitatibus porro, aliquam, sunt laborum officia fugiat consequatur odit aperiam tenetur! Mollitia dolor, ullam molestiae, culpa commodi temporibus ad aperiam distinctio atque dignissimos cumque ut error, qui eligendi omnis dicta reiciendis? Odit, totam. Corporis enim doloremque tenetur modi id.</p>
+                    <!-- LABEL & INPUT -->
+                    <label for="modal-email" class="form-label">
+                        Your email address:
+                    </label>
+                    <input type="email" class="form-control" id="modal-email" placeholder="e.g. mario@example.com">
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary">
+                        Submit
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- OFFCANVAS -->
+    <div id="sidebar" class="offcanvas offcanvas-start" tabindex="-1" aria-labelledby="sidebar-label">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="sidebar-label">My Other Books</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro architecto totam est dolores excepturi rerum aspernatur sint, cumque inventore laboriosam aliquam iure nulla, ullam at nostrum omnis! Eos molestiae impedit ipsa consectetur veniam asperiores deserunt voluptatem exercitationem commodi deleniti illum iure, quis, veritatis, itaque excepturi! Dolore, sequi! Dolorem explicabo maiores soluta rem sunt necessitatibus minus? Consequatur facere expedita quod saepe?</p>
+
+            <!-- THE DROPDOWN -->
+            <div class="dropdown mt-3">
+                <button id="book-dropdown" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                    Choose a book title
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="book-dropdown">
+                    <li><a href="#" class="dropdown-item">Become a React Superhero</a></li>
+                    <li><a href="#" class="dropdown-item">Conquering Vue.js</a></li>
+                    <li><a href="#" class="dropdown-item">Levelling up Your Next.js</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        const tooltips = document.querySelectorAll(".tt");
+        tooltips.forEach(t => {
+            new bootstrap.Tooltip(t)
+        })
+    </script>
 </body>
 </html>
